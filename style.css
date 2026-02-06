@@ -7,13 +7,14 @@
 body {
     font-family: 'IBM Plex Sans Thai', 'Arial', sans-serif;
     line-height: 1.6;
-    color: #1a2a40; /* น้ำเงินเข้ม */
-    background-color: #ffffff;
+    color: #ffffff; /* เปลี่ยนตัวอักษรหลักเป็นขาว */
+    background-color: #0d1b2a; /* น้ำเงินเข้มเกือบดำ (Deep Space Blue) */
 }
 
 /* Color Variables Concept */
 :root {
-    --primary-blue: #1a2a40;
+    --primary-blue: #0d1b2a;
+    --navy-blue: #1b263b;
     --gold: #c5a059;
     --light-gold: #d4af37;
 }
@@ -26,9 +27,9 @@ nav {
     padding: 2rem 5%;
     position: sticky;
     top: 0;
-    background: #fff;
+    background: var(--primary-blue); /* Nav เป็นน้ำเงินเข้ม */
     z-index: 1000;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.3); /* เส้นใต้สีทองจางๆ */
 }
 
 .logo {
@@ -36,12 +37,12 @@ nav {
     font-weight: 800;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--primary-blue);
+    color: var(--gold); /* โลโก้สีทองบนพื้นน้ำเงิน */
 }
 
 nav ul li a {
     text-decoration: none;
-    color: var(--primary-blue);
+    color: #ffffff;
     font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: 1px;
@@ -60,6 +61,9 @@ nav ul li a:hover {
     justify-content: center;
     padding: 0 5%;
     background-color: var(--primary-blue);
+    background-image: linear-gradient(rgba(13, 27, 42, 0.8), rgba(13, 27, 42, 0.8)), url('assets/images/work/t5-house/cover.jpg'); /* ใส่รูปจางๆ ในพื้นหลัง */
+    background-size: cover;
+    background-position: center;
     color: #fff;
 }
 
@@ -68,18 +72,20 @@ nav ul li a:hover {
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 2rem;
-    color: var(--gold); /* ชื่อหัวข้อสีทอง */
+    color: var(--gold);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .hero p {
     font-size: 1.4rem;
     max-width: 600px;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Section Title */
 .section-header {
     padding: 5rem 5% 2rem;
+    background-color: var(--navy-blue); /* ส่วนคั่นเป็นน้ำเงินอีกเฉด */
 }
 
 .section-header h2 {
@@ -88,7 +94,7 @@ nav ul li a:hover {
     border-bottom: 3px solid var(--gold);
     display: inline-block;
     padding-bottom: 0.5rem;
-    color: var(--primary-blue);
+    color: var(--gold);
 }
 
 /* Grid */
@@ -96,7 +102,12 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    padding: 0 5%;
+    padding: 3rem 5%;
+    background-color: var(--primary-blue);
+}
+
+.work-item {
+    border: 1px solid rgba(197, 160, 89, 0.2); /* กรอบรูปสีทองจางๆ */
 }
 
 .work-overlay h3 {
@@ -114,9 +125,9 @@ nav ul li a:hover {
 /* Footer */
 footer {
     padding: 5rem 5%;
-    background: var(--primary-blue);
+    background: #09121c; /* ท้ายเว็บน้ำเงินเข้มจัด */
     color: #fff;
-    margin-top: 5rem;
+    margin-top: 0; /* ติดกับส่วนบน */
     border-top: 5px solid var(--gold);
 }
 
