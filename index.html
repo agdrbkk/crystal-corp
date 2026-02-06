@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRYSTAL CORP | ออกแบบสถาปัตยกรรมและรับสร้างบ้านหรู</title>
+    <title>CRYSTAL CORP | รับสร้างบ้านหรู ออกแบบบ้านครบวงจร</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
@@ -13,50 +14,110 @@
         <div class="logo">CRYSTAL CORP</div>
         <ul>
             <li><a href="#">หน้าแรก</a></li>
-            <li><a href="#">บริการออกแบบ</a></li>
-            <li><a href="#">งานก่อสร้าง</a></li>
-            <li><a href="#">ผลงานของเรา</a></li>
+            <li><a href="#">แบบบ้าน</a></li>
+            <li><a href="#">ผลงานก่อสร้าง</a></li>
+            <li><a href="#">เกี่ยวกับเรา</a></li>
             <li><a href="#">ติดต่อเรา</a></li>
         </ul>
     </nav>
 
     <header class="hero">
-        <h1>เหนือระดับ<br>แห่งการอยู่อาศัย</h1>
-        <p>Crystal Corp มอบประสบการณ์การออกแบบสถาปัตยกรรมและตกแต่งภายในระดับพรีเมียม สร้างสรรค์พื้นที่ที่เป็นเอกลักษณ์เฉพาะตัวคุณ</p>
+        <div class="hero-content">
+            <h1>รับสร้างบ้านหรู<br>ออกแบบตามสไตล์คุณ</h1>
+            <p>ประสบการณ์มากกว่า 20 ปี ในการรังสรรค์บ้านในฝันให้เป็นจริง ด้วยทีมสถาปนิกและวิศวกรมืออาชีพ</p>
+            <a href="#" class="btn-gold">ดูแบบบ้านทั้งหมด</a>
+        </div>
     </header>
 
-    <section class="section-header">
-        <h2>ผลงานที่โดดเด่น</h2>
+    <section class="services-section">
+        <h2 style="color: var(--primary-blue); font-size: 2rem;">บริการของเรา</h2>
+        <p style="color: #666; margin-top: 1rem;">ครบวงจรเรื่องบ้าน ตั้งแต่การออกแบบจนถึงการส่งมอบ</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fa-solid fa-pen-ruler"></i>
+                <h3>ออกแบบสถาปัตยกรรม</h3>
+                <p>ดีไซน์ที่เป็นเอกลักษณ์ สะท้อนตัวตนผู้อยู่อาศัย</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-couch"></i>
+                <h3>ตกแต่งภายใน</h3>
+                <p>สร้างบรรยากาศที่อบอุ่นและหรูหราในทุกตารางเมตร</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-helmet-safety"></i>
+                <h3>งานก่อสร้าง</h3>
+                <p>มาตรฐาน ISO ควบคุมงานโดยวิศวกรผู้เชี่ยวชาญ</p>
+            </div>
+        </div>
     </section>
 
-    <main class="work-grid">
-        <div class="work-item">
-            <img src="assets/images/work/t5-house/cover.jpg" alt="T5 House">
-            <div class="work-overlay">
-                <h3>T5 House</h3>
-                <p>งานออกแบบสถาปัตยกรรม</p>
+    <section class="portfolio-section">
+        <div class="section-title-wrap">
+            <div>
+                <h2>ผลงานที่ผ่านมา</h2>
+                <p style="color: #666; margin-top: 0.5rem;">บ้านที่สร้างด้วยหัวใจและความพิถีพิถัน</p>
+            </div>
+            <a href="#" style="color: var(--gold); text-decoration: none; font-weight: 600;">ดูทั้งหมด →</a>
+        </div>
+        
+        <div class="work-grid">
+            <div class="work-item">
+                <img src="assets/images/work/t5-house/cover.jpg" alt="T5 House">
+                <div class="work-info">
+                    <h3>T5 House</h3>
+                    <p>Modern Luxury Style</p>
+                </div>
+            </div>
+            <div class="work-item">
+                <img src="assets/images/work/baan-maria/cover.jpg" alt="Baan Maria">
+                <div class="work-info">
+                    <h3>Baan Maria</h3>
+                    <p>Classic Contemporary</p>
+                </div>
+            </div>
+            <div class="work-item">
+                <img src="assets/images/work/my-name-coffee/cover.png" alt="My Name Coffee">
+                <div class="work-info">
+                    <h3>My Name Specialty Coffee</h3>
+                    <p>Commercial Space</p>
+                </div>
             </div>
         </div>
-        <div class="work-item">
-            <img src="assets/images/work/baan-maria/cover.jpg" alt="Baan Maria">
-            <div class="work-overlay">
-                <h3>Baan Maria</h3>
-                <p>งานออกแบบภายใน</p>
-            </div>
-        </div>
-        <div class="work-item" style="grid-column: span 2;">
-            <img src="assets/images/work/my-name-coffee/cover.png" alt="My Name Coffee">
-            <div class="work-overlay">
-                <h3>My Name Specialty Coffee</h3>
-                <p>งานออกแบบพื้นที่เชิงพาณิชย์</p>
-            </div>
-        </div>
-    </main>
+    </section>
 
     <footer>
-        <div class="logo" style="color: #c5a059;">CRYSTAL CORP</div>
-        <p style="margin-top: 2rem; color: #fff;">ออกแบบและสร้างสรรค์เพื่อความสมบูรณ์แบบ</p>
-        <p style="margin-top: 1rem; color: rgba(255,255,255,0.5); font-size: 0.8rem;">© 2026 CRYSTAL CORP. All rights reserved.</p>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo" style="color: var(--gold); margin-bottom: 1.5rem;">CRYSTAL CORP</div>
+                <p style="color: rgba(255,255,255,0.6);">บริษัทรับสร้างบ้านหรูและออกแบบครบวงจร มุ่งมั่นส่งมอบบ้านที่มีคุณภาพและดีไซน์ที่เหนือระดับ</p>
+            </div>
+            <div class="footer-col">
+                <h4>ลิงก์ด่วน</h4>
+                <ul>
+                    <li><a href="#">หน้าแรก</a></li>
+                    <li><a href="#">แบบบ้าน</a></li>
+                    <li><a href="#">ผลงาน</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>บริการ</h4>
+                <ul>
+                    <li><a href="#">ออกแบบบ้าน</a></li>
+                    <li><a href="#">รับสร้างบ้าน</a></li>
+                    <li><a href="#">ตกแต่งภายใน</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>ติดต่อเรา</h4>
+                <ul>
+                    <li><i class="fa-solid fa-phone" style="margin-right: 10px;"></i> 0xx-xxx-xxxx</li>
+                    <li><i class="fa-solid fa-envelope" style="margin-right: 10px;"></i> hello@crystalcorp.com</li>
+                </ul>
+            </div>
+        </div>
+        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center; color: rgba(255,255,255,0.4); font-size: 0.8rem;">
+            © 2026 CRYSTAL CORP. All rights reserved.
+        </div>
     </footer>
 
 </body>

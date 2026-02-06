@@ -7,16 +7,15 @@
 body {
     font-family: 'IBM Plex Sans Thai', 'Arial', sans-serif;
     line-height: 1.6;
-    color: #ffffff; /* เปลี่ยนตัวอักษรหลักเป็นขาว */
-    background-color: #0d1b2a; /* น้ำเงินเข้มเกือบดำ (Deep Space Blue) */
+    color: #1a2a40;
+    background-color: #ffffff; /* กลับมาใช้สีขาวคลีนๆ แบบ Array */
 }
 
-/* Color Variables Concept */
+/* Color Variables */
 :root {
-    --primary-blue: #0d1b2a;
-    --navy-blue: #1b263b;
+    --primary-blue: #1a2a40;
     --gold: #c5a059;
-    --light-gold: #d4af37;
+    --light-gray: #f8f9fa;
 }
 
 /* Navigation */
@@ -24,111 +23,226 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 5%;
+    padding: 1.5rem 8%;
     position: sticky;
     top: 0;
-    background: var(--primary-blue); /* Nav เป็นน้ำเงินเข้ม */
+    background: #fff;
     z-index: 1000;
-    border-bottom: 1px solid rgba(197, 160, 89, 0.3); /* เส้นใต้สีทองจางๆ */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--gold); /* โลโก้สีทองบนพื้นน้ำเงิน */
+    letter-spacing: 1px;
+    color: var(--primary-blue);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #ffffff;
-    font-size: 0.95rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
     color: var(--gold);
 }
 
-/* Hero */
+/* Hero Slider Area */
 .hero {
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 5%;
-    background-color: var(--primary-blue);
-    background-image: linear-gradient(rgba(13, 27, 42, 0.8), rgba(13, 27, 42, 0.8)), url('assets/images/work/t5-house/cover.jpg'); /* ใส่รูปจางๆ ในพื้นหลัง */
+    height: 90vh;
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    position: relative;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.6) 30%, transparent), url('assets/images/work/t5-house/cover.jpg');
     color: #fff;
+}
+
+.hero-content {
+    max-width: 700px;
 }
 
 .hero h1 {
-    font-size: 5rem;
-    font-weight: 900;
-    line-height: 1.1;
-    margin-bottom: 2rem;
-    color: var(--gold);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
 }
 
 .hero p {
-    font-size: 1.4rem;
-    max-width: 600px;
-    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
 }
 
-/* Section Title */
-.section-header {
-    padding: 5rem 5% 2rem;
-    background-color: var(--navy-blue); /* ส่วนคั่นเป็นน้ำเงินอีกเฉด */
-}
-
-.section-header h2 {
-    font-size: 2rem;
-    letter-spacing: 2px;
-    border-bottom: 3px solid var(--gold);
+.btn-gold {
     display: inline-block;
-    padding-bottom: 0.5rem;
-    color: var(--gold);
+    padding: 1rem 2.5rem;
+    background-color: var(--gold);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
 }
 
-/* Grid */
+.btn-gold:hover {
+    background-color: #b08e4a;
+}
+
+/* Services Grid (Style like Array) */
+.services-section {
+    padding: 6rem 8%;
+    background: var(--light-gray);
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    background: #fff;
+    padding: 3rem 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 6rem 8%;
+}
+
+.section-title-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+}
+
+.section-title-wrap h2 {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+}
+
 .work-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-    padding: 3rem 5%;
-    background-color: var(--primary-blue);
 }
 
 .work-item {
-    border: 1px solid rgba(197, 160, 89, 0.2); /* กรอบรูปสีทองจางๆ */
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/5;
 }
 
-.work-overlay h3 {
-    font-size: 1.6rem;
-    color: var(--gold);
-    margin-bottom: 0.3rem;
+.work-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
 }
 
-.work-overlay p {
+.work-item:hover img {
+    transform: scale(1.1);
+}
+
+.work-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
     color: #fff;
-    font-size: 1rem;
-    opacity: 0.9;
+}
+
+.work-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Footer */
 footer {
-    padding: 5rem 5%;
-    background: #09121c; /* ท้ายเว็บน้ำเงินเข้มจัด */
+    background: var(--primary-blue);
     color: #fff;
-    margin-top: 0; /* ติดกับส่วนบน */
-    border-top: 5px solid var(--gold);
+    padding: 5rem 8% 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.footer-col h4 {
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-col ul li a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: var(--gold);
+}
+
+@media (max-width: 1024px) {
+    .services-grid, .work-grid { grid-template-columns: 1fr 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .services-grid, .work-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
